@@ -6,7 +6,7 @@
 *AgroSphere* is an AI-powered platform designed to transform traditional farming practices. By leveraging machine learning, satellite imagery, and climate analytics, AgroSphere provides farmers with personalized recommendations on crop selection, farming techniques, and sustainable practices. It empowers farmers to make data-driven decisions, improving yield, efficiency, and climate resilience.  
 
 ### **Demo**  
-🔗 [Live Demo of AgroSphere](https://agrisphere.netlify.app/) *(Replace with your live demo link)*  
+🔗 [Live Demo of AgroSphere](https://agrisphere.netlify.app/) 
 
 ---
 
