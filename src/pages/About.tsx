@@ -1,14 +1,16 @@
 import React from 'react';
 import { Sprout, Users, Globe, Shield } from 'lucide-react';
+import { PageBackground } from '../components/PageBackground';
+import { backgrounds } from '../utils/backgroundImages';
 
 export const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 py-8">
-      <div className="container mx-auto px-4">
+    <PageBackground image={backgrounds.about}>
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-green-800 text-center mb-12">About AgroSphere</h1>
-          
-          <div className="bg-white rounded-xl shadow-xl p-8 mb-8">
+          <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-8">
+            <h1 className="text-4xl font-bold text-green-800 text-center mb-12">About AgroSphere</h1>
+            
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
               AgroSphere is a comprehensive platform dedicated to empowering farmers with modern
               technology and sustainable farming practices. Our mission is to bridge the gap between
@@ -51,6 +53,6 @@ export const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageBackground>
   );
 };

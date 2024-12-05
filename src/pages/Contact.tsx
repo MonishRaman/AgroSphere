@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { PageBackground } from '../components/PageBackground';
+import { backgrounds } from '../utils/backgroundImages';
 
 export const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,19 +12,18 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     alert('Thank you for your message. We will get back to you soon!');
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 py-8">
-      <div className="container mx-auto px-4">
+    <PageBackground image={backgrounds.contact}>
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-green-800 text-center mb-12">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-white text-center mb-12">Contact Us</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-xl p-8">
+            <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-8">
               <h2 className="text-2xl font-semibold text-green-800 mb-6">Get in Touch</h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -67,7 +68,7 @@ export const Contact: React.FC = () => {
               </form>
             </div>
 
-            <div className="bg-white rounded-xl shadow-xl p-8">
+            <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-8">
               <h2 className="text-2xl font-semibold text-green-800 mb-6">Contact Information</h2>
               
               <div className="space-y-6">
@@ -99,6 +100,6 @@ export const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageBackground>
   );
 };

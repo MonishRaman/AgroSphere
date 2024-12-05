@@ -1,14 +1,16 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { PageBackground } from '../components/PageBackground';
+import { backgrounds } from '../utils/backgroundImages';
 
 export const Community: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 py-8">
-      <div className="container mx-auto px-4">
+    <PageBackground image={backgrounds.community}>
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-green-800 mb-6">Join Our Farming Community</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Join Our Farming Community</h1>
           
-          <div className="bg-white rounded-xl shadow-xl p-8">
+          <div className="bg-white/90 backdrop-blur-md rounded-xl shadow-xl p-8">
             <MessageCircle className="w-16 h-16 text-green-600 mx-auto mb-6" />
             
             <p className="text-lg text-gray-700 mb-8">
@@ -27,6 +29,6 @@ export const Community: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageBackground>
   );
 };
