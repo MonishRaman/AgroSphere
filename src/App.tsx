@@ -11,11 +11,16 @@ import { YieldAnalysis } from './pages/YieldAnalysis';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Community } from './pages/Community';
+import {GovConnect} from './pages/GovConnect';
+import {AgriMart} from './pages/AgriMart';
+import {Discover} from './pages/Discover';
+import {Faqs } from './pages/Faqs';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
+        {/* Navbar includes dynamic profile image and greeting */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,6 +33,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/govconnect" element={<GovConnect />} />
+          <Route path="/agrimart" element={<AgriMart />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/faqs" element={<Faqs />} />
+
+
         </Routes>
       </div>
     </Router>

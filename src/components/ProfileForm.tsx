@@ -59,11 +59,13 @@ export const ProfileForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+  
     setUserProfile({
-      ...formData,
-      age: parseInt(formData.age, 10),
+      name: formData.name,
+      photo: formData.photo,
     });
-    navigate("/dashboard");
+  
+    navigate('/dashboard'); // Or any route you wish
   };
 
   const farmingTypes: FarmingType[] = [
