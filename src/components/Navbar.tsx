@@ -6,16 +6,16 @@ import { UserCircle2 } from 'lucide-react';
 export const Navbar: React.FC = () => {
   const { isAuthenticated, userProfile } = useStore();
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isOthersDropdownOpen, setIsOthersDropdownOpen] = useState(false);
 
-  // Toggle profile dropdown visibility
-  const toggleProfileDropdown = () => {
-    setIsProfileDropdownOpen((prev) => !prev);
-  };
+  // Toggle dropdowns
+  const toggleProfileDropdown = () => setIsProfileDropdownOpen((prev) => !prev);
+  const toggleOthersDropdown = () => setIsOthersDropdownOpen((prev) => !prev);
 
   return (
     <nav className="bg-green-700 text-white p-4 shadow-lg relative">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo and Home Link */}
+        {/* Logo */}
         <Link to="/" className="text-2xl font-bold">AgroSphere</Link>
         
         {/* Navigation Links */}
@@ -24,11 +24,28 @@ export const Navbar: React.FC = () => {
           <Link to="/about" className="hover:text-green-200">About Us</Link>
           <Link to="/contact" className="hover:text-green-200">Contact</Link>
           <Link to="/community" className="hover:text-green-200">Community</Link>
-          
+
+          {/* Others Dropdown */}
+          <div className="relative">
+            <button
+              onClick={toggleOthersDropdown}
+              className="hover:text-green-200"
+            >
+              Others
+            </button>
+            {isOthersDropdownOpen && (
+              <div className="absolute top-8 right-0 bg-white text-green-700 rounded-lg shadow-lg w-48 z-50">
+                <Link to="/govconnect" className="block px-4 py-2 hover:bg-green-100">GovConnect</Link>
+                <Link to="/agrimart" className="block px-4 py-2 hover:bg-green-100">AgriMart</Link>
+                <Link to="/discover" className="block px-4 py-2 hover:bg-green-100">Discover</Link>
+                <Link to="/faqs" className="block px-4 py-2 hover:bg-green-100">FAQ's</Link>
+              </div>
+            )}
+          </div>
+
           {/* Profile Section or Login Button */}
           {isAuthenticated ? (
             <div className="relative">
-              {/* Display Profile Image or User Icon */}
               <div 
                 className="flex items-center space-x-2 cursor-pointer" 
                 onClick={toggleProfileDropdown}
@@ -45,7 +62,7 @@ export const Navbar: React.FC = () => {
                 <span>{userProfile?.name}</span>
               </div>
 
-              {/* Profile Dropdown - Shows when clicked */}
+              {/* Profile Dropdown */}
               {isProfileDropdownOpen && (
                 <div className="absolute top-12 right-0 bg-white text-green-700 p-4 rounded-lg shadow-lg w-64 z-50">
                   <h3 className="text-xl font-semibold border-b pb-2">Profile Details</h3>
