@@ -27,7 +27,7 @@ export const Dashboard: React.FC = () => {
     },
     {
       type: 'Intensive',
-      image: 'https://images.unsplash.com/photo-1595880500386-4b33823ea991?auto=format&fit=crop&w=600&q=80'
+      image: 'https://www.straydoginstitute.org/wp-content/uploads/2022/05/iStock-506164764.jpg'
     },
     {
       type: 'Organic',
