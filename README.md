@@ -81,10 +81,11 @@ Here’s a detailed README file for your project, *AgroSphere*:
 ### **Installation**  
 
 1. Clone the repository:  
-   ```bash  
-  git clone https://github.com/MonishRaman/AgroSphere.git 
-   cd AgroSphere  
-   ```  
+   1. Clone the repository:
+   ```bash
+   git clone https://github.com/MoniishRaman/AgroSphere.git
+   cd AgroSphere
+   ``` 
 
 2. Install dependencies:  
    - For backend:  
