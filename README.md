@@ -82,7 +82,7 @@ Here’s a detailed README file for your project, *AgroSphere*:
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/yourusername/AgroSphere.git  
+   https://github.com/MonishRaman/AgroSphere.git 
    cd AgroSphere  
    ```  
 
